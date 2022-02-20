@@ -15,3 +15,68 @@
   /* TYPOGRAPHY */
   --ff-default: "Space Mono", monospace;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff-default);
+}
+
+body {
+  background-color: var(--clr-dark-blackish);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.9375rem 1.5rem;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+header span {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 39px;
+  color: var(--clr-dark-white);
+}
+
+.button-light {
+  background-image: url(./assets/icon-sun.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  text-align: left;
+  width: 5.625rem;
+  background-color: transparent;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: 2.5px;
+}
+
+.button-light:hover {
+  background-color: pink;
+  cursor: pointer;
+}
+
+main {
+  width: 100%;
+}
+
+.searchbar {
+  background-color: var(--clr-dark-darkgray);
+  width: 100%;
+  border-radius: 15px;
+  padding: 1.25rem 1rem;
+}
