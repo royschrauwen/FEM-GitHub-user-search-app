@@ -1,3 +1,13 @@
-body {
-  background-color: pink;
+:root {
+  --clr-light-blue: rgb(0, 121, 255);
+  --clr-light-mediumgray: rgb(105, 124, 154);
+  --clr-light-bluegray: rgb(75, 106, 155);
+  --clr-light-darkgray: rgb(43, 52, 66);
+  --clr-light-lightgray: rgb(246, 248, 255);
+  --clr-light-offwhite: rgb(254, 254, 254);
+
+  --clr-dark-blue: rgb(0, 119, 255);
+  --clr-dark-white: rgb(255, 255, 255);
+  --clr-dark-blackish: rgb(20, 29, 47);
+  --clr-dark-darkgray: rgb(30, 42, 71);
 }
