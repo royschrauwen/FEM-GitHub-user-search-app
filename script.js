@@ -36,9 +36,14 @@ function searchUser() {
       document.querySelector("#location").textContent = data.location;
       document.querySelector("#website").textContent = data.html_url;
       document.querySelector("#twitter").textContent = data.twitter_username;
+      document.querySelector("#twitter").textContent = "Not Available";
       document.querySelector("#company").textContent = data.company;
     })
     .catch(() => {
       console.error("Problem with getting data from API");
     });
 }
+
+window.onload = () => {
+  searchUser();
+};

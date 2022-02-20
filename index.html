@@ -15,22 +15,23 @@
   <script src="./script.js" defer></script>
 </head>
 
-<body>
+<body class="body-dark">
 
   <header>
     <span>devfinder</span>
 
-    <button class="button-light" id="light">Light</button>
+    <button class="button-light-dark button-light" id="light">Light</button>
     <!-- <button class="button-dark" id="dark">Dark</button> -->
   </header>
 
   <main>
     <div class="searchbar">
+      <img src="./assets/icon-search.svg" alt="">
       <input type="text" name="" value="octocat" id="input-searchbar" placeholder="Search GitHub username...">
       <button class="button-search" id="button-search">Search</button>
     </div>
 
-    <div class="result-container">
+    <div class="result-container result-container-dark">
 
       <div class="profile">
         <div class="profile-image"></div>
@@ -43,7 +44,7 @@
         </div>
       </div>
 
-      <div class="counters">
+      <div class="counters counters-dark">
         <div>
           <span class="counter-name">Repos</span>
           <span class="counter-number" id="counter-repos" aria-live="polite"></span>
@@ -59,10 +60,10 @@
       </div>
 
       <div class="links">
-        <span class="links-location" id="location" aria-live="polite"></span>
+        <span class="links-location icon-active" id="location" aria-live="polite"></span>
         <span class="links-website" id="website" aria-live="polite"></span>
         <span class="links-twitter" id="twitter" aria-live="polite"></span>
-        <span class="links-conpany" id="company" aria-live="polite"></span>
+        <span class="links-company" id="company" aria-live="polite"></span>
       </div>
     </div>
   </main>
