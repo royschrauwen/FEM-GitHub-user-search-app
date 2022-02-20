@@ -27,6 +27,7 @@
 
 body {
   background-color: var(--clr-dark-blackish);
+  color: var(--clr-dark-white);
   display: flex;
   justify-content: center;
   align-items: center;
