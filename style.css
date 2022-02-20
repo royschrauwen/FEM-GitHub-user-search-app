@@ -1,4 +1,5 @@
 :root {
+  /* COLORS */
   --clr-light-blue: rgb(0, 121, 255);
   --clr-light-mediumgray: rgb(105, 124, 154);
   --clr-light-bluegray: rgb(75, 106, 155);
@@ -11,5 +12,6 @@
   --clr-dark-blackish: rgb(20, 29, 47);
   --clr-dark-darkgray: rgb(30, 42, 71);
 
+  /* TYPOGRAPHY */
   --ff-default: "Space Mono", monospace;
 }
