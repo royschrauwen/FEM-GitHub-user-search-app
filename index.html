@@ -26,7 +26,7 @@
 
   <main>
     <div class="searchbar">
-      <input type="text" name="" value="royschrauwen" id="input-searchbar" placeholder="Search GitHub username...">
+      <input type="text" name="" value="octocat" id="input-searchbar" placeholder="Search GitHub username...">
       <button class="button-search" id="button-search">Search</button>
     </div>
 
@@ -34,29 +34,35 @@
 
       <div class="profile">
         <div class="profile-image"></div>
-        <h1 class="profile-name">Name</h1>
-        <div class="profile-username">username</div>
-        <div class="profile-date">date</div>
+        <h1 class="profile-name" aria-live="polite">Name</h1>
+        <div class="profile-username" aria-live="polite">username</div>
+        <div class="profile-date" aria-live="polite">date</div>
 
-        <div class="profile-description">
-          description
+        <div class="profile-bio" aria-live="polite">
+          bio
         </div>
       </div>
 
       <div class="counters">
-        <span class="counter-name">Repos</span>
-        <span class="counter-number" id="counter-repos"></span>
-        <span class="counter-name">Followers</span>
-        <span class="counter-number" id="counter-followers"></span>
-        <span class="counter-name">Following</span>
-        <span class="counter-number" id="counter-following"></span>
+        <div>
+          <span class="counter-name">Repos</span>
+          <span class="counter-number" id="counter-repos" aria-live="polite"></span>
+        </div>
+        <div>
+          <span class="counter-name">Followers</span>
+          <span class="counter-number" id="counter-followers" aria-live="polite"></span>
+        </div>
+        <div>
+          <span class="counter-name">Following</span>
+          <span class="counter-number" id="counter-following" aria-live="polite"></span>
+        </div>
       </div>
 
       <div class="links">
-        <span class="links-location" id="link-location"></span>
-        <span class="links-website" id="link-website"></span>
-        <span class="links-twitter" id="link-twitter"></span>
-        <span class="links-conpany" id="link-company"></span>
+        <span class="links-location" id="location" aria-live="polite"></span>
+        <span class="links-website" id="website" aria-live="polite"></span>
+        <span class="links-twitter" id="twitter" aria-live="polite"></span>
+        <span class="links-conpany" id="company" aria-live="polite"></span>
       </div>
     </div>
   </main>

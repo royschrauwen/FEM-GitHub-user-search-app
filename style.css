@@ -81,3 +81,100 @@ main {
   border-radius: 15px;
   padding: 1.25rem 1rem;
 }
+
+.profile {
+  display: grid;
+  grid-template-areas:
+    "img name"
+    "img username"
+    "img date"
+    "bio bio";
+}
+
+.profile-image {
+  grid-area: img;
+}
+
+.profile-image img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.profile h1 {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  grid-area: name;
+}
+
+.profile-username {
+  font-size: 13px;
+  line-height: 19px;
+  grid-area: username;
+
+  color: #0079ff;
+}
+
+.profile-date {
+  font-size: 13px;
+  line-height: 19px;
+  grid-area: date;
+
+  color: #ffffff;
+}
+
+.profile-bio {
+  font-size: 13px;
+  line-height: 25px;
+  /* or 192% */
+  grid-area: bio;
+
+  color: #ffffff;
+}
+
+.result-container {
+  background-color: #1e2a47;
+  border-radius: 15px;
+  padding: 32px 24px;
+  margin-top: 16px;
+}
+
+.counters {
+  background-color: #141d2f;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  padding: 1.125rem 0.9375rem;
+  border-radius: 10px;
+  margin: 24px auto;
+}
+
+.counters div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.counter-name {
+  font-size: 11px;
+  line-height: 16px;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.counter-number {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
