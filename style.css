@@ -10,4 +10,6 @@
   --clr-dark-white: rgb(255, 255, 255);
   --clr-dark-blackish: rgb(20, 29, 47);
   --clr-dark-darkgray: rgb(30, 42, 71);
+
+  --ff-default: "Space Mono", monospace;
 }
