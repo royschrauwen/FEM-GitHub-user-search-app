@@ -1,7 +1,5 @@
 const searchButton = document.querySelector("#button-search");
 
-const userName = document.querySelector(".profile-name");
-
 searchButton.addEventListener("click", searchUser);
 
 let user = "octocat";
@@ -41,20 +39,22 @@ function formatDate(date) {
   );
 }
 
-const repos = document.querySelector("#counter-repos");
-const followers = document.querySelector("#counter-followers");
-const following = document.querySelector("#counter-following");
-const username = document.querySelector(".profile-username");
+const userName = document.querySelector(".profile-name");
+
+const profileImage = document.querySelector(".profile-image");
+const publicRepos = document.querySelector("#counter-repos");
+const githubFollowers = document.querySelector("#counter-followers");
+const githubFollowing = document.querySelector("#counter-following");
+const githubUsername = document.querySelector(".profile-username");
 function setData(data) {
   userName.textContent = data.name;
 
-  document.querySelector(".profile-image").innerHTML =
-    "<img src=" + data.avatar_url + ">";
+  profileImage.innerHTML = "<img src=" + data.avatar_url + ">";
 
-  repos.textContent = data.public_repos;
-  followers.textContent = data.followers;
-  following.textContent = data.following;
-  username.innerHTML =
+  publicRepos.textContent = data.public_repos;
+  githubFollowers.textContent = data.followers;
+  githubFollowing.textContent = data.following;
+  githubUsername.innerHTML =
     '<a href="http://www.github.com/' +
     data.login +
     '" target="_blank">@' +
