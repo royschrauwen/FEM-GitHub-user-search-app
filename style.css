@@ -136,7 +136,7 @@ main {
   border-radius: 50%;
 }
 
-.profile h1 {
+h1 {
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
@@ -284,4 +284,46 @@ main {
   margin-right: 19.25px;
   background-position: left;
   background-repeat: no-repeat;
+}
+
+@media (min-width: 641px) {
+  body {
+    padding-left: 97px;
+    padding-right: 97px;
+    background-color: pink;
+  }
+
+  main {
+    background-color: red;
+  }
+
+  h1 {
+    font-size: 26px;
+    line-height: 39px;
+    /* identical to box height */
+  }
+
+  .profile-image img {
+    width: 117px;
+    height: 117px;
+  }
+
+  .profile-username {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .profile-date {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .profile-bio {
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .links span {
+    flex: 50%;
+  }
 }
