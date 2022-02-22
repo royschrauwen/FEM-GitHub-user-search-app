@@ -19,25 +19,7 @@ function searchUser() {
     .then((data) => {
       console.log(data);
 
-      userName.textContent = data.name;
-
-      document.querySelector(".profile-image").innerHTML =
-        "<img src=" + data.avatar_url + ">";
-
-      document.querySelector("#counter-repos").textContent = data.public_repos;
-      document.querySelector("#counter-followers").textContent = data.followers;
-      document.querySelector("#counter-following").textContent = data.following;
-      document.querySelector(".profile-username").textContent =
-        "@" + data.login;
-      document.querySelector(".profile-date").textContent = data.created_at;
-      document.querySelector(".profile-bio").textContent = data.bio;
-      document.querySelector(".profile-bio").textContent =
-        "This profile has no bio";
-      document.querySelector("#location").textContent = data.location;
-      document.querySelector("#website").textContent = data.html_url;
-      document.querySelector("#twitter").textContent = data.twitter_username;
-      document.querySelector("#twitter").textContent = "Not Available";
-      document.querySelector("#company").textContent = data.company;
+      setData(data);
     })
     .catch(() => {
       console.error("Problem with getting data from API");
@@ -47,3 +29,80 @@ function searchUser() {
 window.onload = () => {
   searchUser();
 };
+
+function formatDate(date) {
+  let joinedDate = new Date(date);
+  return (
+    joinedDate.getDate() +
+    " " +
+    joinedDate.toLocaleString("en-us", { month: "short" }) +
+    " " +
+    joinedDate.getFullYear()
+  );
+}
+
+const repos = document.querySelector("#counter-repos");
+const followers = document.querySelector("#counter-followers");
+const following = document.querySelector("#counter-following");
+const username = document.querySelector(".profile-username");
+function setData(data) {
+  userName.textContent = data.name;
+
+  document.querySelector(".profile-image").innerHTML =
+    "<img src=" + data.avatar_url + ">";
+
+  repos.textContent = data.public_repos;
+  followers.textContent = data.followers;
+  following.textContent = data.following;
+  username.innerHTML =
+    '<a href="http://www.github.com/' +
+    data.login +
+    '" target="_blank">@' +
+    data.login +
+    "</a>";
+
+  document.querySelector(".profile-date").textContent =
+    "Joined " + formatDate(data.created_at);
+
+  if (!data.bio) {
+    document.querySelector(".profile-bio").textContent =
+      "This profile has no bio";
+  } else {
+    document.querySelector(".profile-bio").textContent = data.bio;
+  }
+
+  if (!data.location) {
+    document.querySelector("#location").textContent = "Not Available";
+  } else {
+    document.querySelector("#location").innerHTML =
+      '<a href="https://www.google.com/maps/place/' +
+      data.location +
+      '" target="_blank">' +
+      data.location +
+      "</a>";
+  }
+
+  if (!data.html_url) {
+    document.querySelector("#website").textContent = "Not Available";
+  } else {
+    document.querySelector("#website").innerHTML =
+      '<a href="' +
+      data.html_url +
+      '" target="_blank">' +
+      data.html_url +
+      "</a>";
+  }
+
+  if (!data.twitter_username) {
+    document.querySelector("#twitter").textContent = "Not Available";
+  } else {
+    document.querySelector("#twitter").innerHTML =
+      '<a href="http://www.twitter.com/' +
+      data.twitter_username +
+      '" target="_blank">@' +
+      data.twitter_username +
+      "</a>";
+  }
+
+  document.querySelector("#company").textContent = data.company;
+}
