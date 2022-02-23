@@ -33,11 +33,6 @@ body {
   padding: 1.9375rem 1.5rem;
 }
 
-.body-dark {
-  background-color: var(--clr-dark-blackish);
-  color: var(--clr-dark-white);
-}
-
 header {
   width: 100%;
   display: flex;
@@ -82,7 +77,6 @@ main {
 }
 
 .searchbar {
-  background-color: var(--clr-dark-darkgray);
   width: 100%;
   border-radius: 15px;
   position: relative;
@@ -175,10 +169,6 @@ h1 {
   margin-top: 16px;
 }
 
-.result-container-dark {
-  background-color: #1e2a47;
-}
-
 .counters {
   display: flex;
   justify-content: space-evenly;
@@ -187,10 +177,6 @@ h1 {
   padding: 1.125rem 0.9375rem;
   border-radius: 10px;
   margin: 24px auto;
-}
-
-.counters-dark {
-  background-color: #141d2f;
 }
 
 .counters div {
@@ -325,5 +311,35 @@ h1 {
 
   .links span {
     flex: 50%;
+  }
+
+  body {
+    background-color: goldenrod;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #eee;
+    background-color: purple;
+  }
+
+  body a {
+    color: #809fff;
+  }
+  .body-dark {
+    background-color: var(--clr-dark-blackish);
+    color: var(--clr-dark-white);
+  }
+
+  .counters-dark {
+    background-color: #141d2f;
+  }
+  .searchbar-dark {
+    background-color: var(--clr-dark-darkgray);
+  }
+
+  .result-container-dark {
+    background-color: #1e2a47;
   }
 }
