@@ -80,6 +80,7 @@ function setData(data) {
       '" target="_blank">' +
       data.location +
       "</a>";
+    document.querySelector("#location").classList.add("icon-active");
   }
 
   if (!data.html_url) {
@@ -91,6 +92,7 @@ function setData(data) {
       '" target="_blank">' +
       data.html_url +
       "</a>";
+    document.querySelector("#website").classList.add("icon-active");
   }
 
   if (!data.twitter_username) {
@@ -102,6 +104,7 @@ function setData(data) {
       '" target="_blank">@' +
       data.twitter_username +
       "</a>";
+    document.querySelector("#twitter").classList.add("icon-active");
   }
 
   document.querySelector("#company").textContent = data.company;
